@@ -5,6 +5,9 @@ $id_user = $_SESSION['idUser'];
 $permiso = "nueva_venta";
 $sql = mysqli_query($conexion, "SELECT p.*, d.* FROM permisos p INNER JOIN detalle_permisos d ON p.id = d.id_permiso WHERE d.id_usuario = $id_user AND p.nombre = '$permiso'");
 $existe = mysqli_fetch_all($sql);
+$result = mysqli_query($conexion, "SELECT * FROM producto WHERE existencia > 0");
+$productos = mysqli_fetch_all($result, MYSQLI_ASSOC);
+print_r($productos); 
 if (empty($existe) && $id_user != 1) {
     header('Location: permisos.php');
 }

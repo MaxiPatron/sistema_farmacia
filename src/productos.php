@@ -22,9 +22,9 @@ if (!empty($_POST)) {
     if (!empty($_POST['accion'])) {
         $vencimiento = $_POST['vencimiento'];
     }
-    if (empty($codigo) || empty($producto) || empty($tipo) || empty($presentacion) || empty($laboratorio)  || empty($precio) || $precio <  0 || empty($cantidad) || $cantidad <  0) {
+    if (empty($codigo) || empty($producto) || empty($tipo) || empty($presentacion) || empty($laboratorio)) {
         $alert = '<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                        Todo los campos son obligatorios
+                        Los campos Código, Producto, Tipo, Presentación y Laboratorio son obligatorios.
                         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
                         </button>
