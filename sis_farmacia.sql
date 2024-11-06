@@ -11,14 +11,13 @@ SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
 SET time_zone = "+00:00";
 
-
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Base de datos: `v_farmacia`
+-- Base de datos: `sis_farmacia`
 --
 
 -- --------------------------------------------------------
@@ -29,10 +28,10 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `cliente` (
   `idcliente` int(11) NOT NULL,
-  `nombre` varchar(100) COLLATE NOT NULL,
-  `telefono` varchar(15) COLLATE NOT NULL,
-  `direccion` varchar(200) COLLATE NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE;
+  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
+  `direccion` varchar(200) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -42,11 +41,11 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `configuracion` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(100) COLLATE NOT NULL,
-  `telefono` varchar(15) COLLATE NOT NULL,
-  `email` varchar(100) COLLATE NOT NULL,
-  `direccion` text COLLATE NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE;
+  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `telefono` varchar(15) COLLATE utf8_spanish_ci NOT NULL,
+  `email` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `direccion` text COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `configuracion`
@@ -81,7 +80,7 @@ CREATE TABLE `detalle_temp` (
   `descuento` decimal(10,2) NOT NULL DEFAULT 0.00,
   `precio_venta` decimal(10,2) NOT NULL,
   `total` decimal(10,2) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -157,15 +156,15 @@ CREATE TABLE `presentacion` (
 
 CREATE TABLE `producto` (
   `codproducto` int(11) NOT NULL,
-  `codigo` varchar(20) COLLATE NOT NULL,
-  `descripcion` varchar(200) COLLATE NOT NULL,
+  `codigo` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `descripcion` varchar(200) COLLATE utf8_spanish_ci NOT NULL,
   `precio` decimal(10,2) NOT NULL,
   `existencia` int(11) NOT NULL,
   `id_lab` int(11) NOT NULL,
   `id_presentacion` int(11) NOT NULL,
   `id_tipo` int(11) NOT NULL,
-  `vencimiento` varchar(20) COLLATE NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE;
+  `vencimiento` varchar(20) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 -- --------------------------------------------------------
 
@@ -186,11 +185,11 @@ CREATE TABLE `tipos` (
 
 CREATE TABLE `usuario` (
   `idusuario` int(11) NOT NULL,
-  `nombre` varchar(100) COLLATE NOT NULL,
-  `correo` varchar(100) COLLATE NOT NULL,
-  `usuario` varchar(20) COLLATE NOT NULL,
-  `clave` varchar(50) COLLATE NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE;
+  `nombre` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `correo` varchar(100) COLLATE utf8_spanish_ci NOT NULL,
+  `usuario` varchar(20) COLLATE utf8_spanish_ci NOT NULL,
+  `clave` varchar(50) COLLATE utf8_spanish_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish_ci;
 
 --
 -- Volcado de datos para la tabla `usuario`

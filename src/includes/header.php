@@ -23,7 +23,7 @@ if (empty($_SESSION['active'])) {
     <div class="wrapper ">
         <div class="sidebar" data-color="purple" data-background-color="blue" data-image="../assets/img/sidebar.jpg">
             <div class="logo bg-primary"><a href="./" class="simple-text logo-normal">
-                    Farmacia
+                    Disofran
                 </a></div>
             <div class="sidebar-wrapper">
                 <ul class="nav">
